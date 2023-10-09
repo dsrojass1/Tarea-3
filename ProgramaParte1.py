@@ -1,21 +1,14 @@
-import numpy as np
+import time
 
 
 def create_graph(filename):
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-        n = len(lines)
-        graph = np.zeros((n, n))
-        
-        for i in range(n):
-            values = lines[i].strip().split()
-            for j in range(n):
-                graph[i][j] = int(values[j])
-                
-        return graph
+    graph = []
+    with open(filename, 'r') as f:
+        for line in f:
+            graph.append(list(map(int, line.split())))  
+    return graph
 
 def dijkstra(graph, start):
-    
     n = len(graph)
     INF = float('inf')
 
@@ -63,7 +56,7 @@ def bellman_ford(graph, start):
 
 def floyd_warshall(graph):
     n = len(graph)
-    distance = np.copy(graph)
+    distance = graph.copy()
 
     for k in range(n):
         for i in range(n):
@@ -73,18 +66,32 @@ def floyd_warshall(graph):
 
     return distance
 
+if __name__ == '__main__':
+    filename = "distances1000_202110.txt"
+    graph = create_graph(filename)
 
-filename = "distancesDisconnected.txt"
-graph = create_graph(filename)
+    print('\n----------------------------------------- Dijkstra: \n')
+    start = time.time()
+    distancesMatrixDijsktra = []
+    for i in range(len(graph)):
+        distancesMatrixDijsktra.append(dijkstra(graph, i))
+    end = time.time()
+    print(distancesMatrixDijsktra)
+    print('\nTiempo de ejecución: ', end - start)
 
-print('\n----------------------------------------- Dijkstra: \n')
-for i in range(len(graph)):
-    print(dijkstra(graph, i))
+    print('\n----------------------------------------- Bellman Ford: \n')
+    start = time.time()
+    distancesMatrixBellmanFord = []
+    for i in range(len(graph)):
+        distancesMatrixBellmanFord.append(bellman_ford(graph, i))
+    end = time.time()
+    print(distancesMatrixBellmanFord)
+    print('\nTiempo de ejecución: ', end - start)
 
-print('\n----------------------------------------- Bellman Ford: \n')
-for i in range(len(graph)):
-    print(bellman_ford(graph, i))
-
-print('\n----------------------------------------- Floyd Warshall: \n')
-print(floyd_warshall(graph))
+    print('\n----------------------------------------- Floyd Warshall: \n')
+    start = time.time()
+    distancesMatrixFloydWarshall = floyd_warshall(graph)
+    end = time.time()
+    print(distancesMatrixFloydWarshall)
+    print('\nTiempo de ejecución: ', end - start)
 
