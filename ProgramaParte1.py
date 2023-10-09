@@ -67,7 +67,7 @@ def floyd_warshall(graph):
     return distance
 
 if __name__ == '__main__':
-    filename = "distances1000_202110.txt"
+    filename = "distances100.txt"
     graph = create_graph(filename)
 
     print('\n----------------------------------------- Dijkstra: \n')

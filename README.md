@@ -15,7 +15,9 @@ Ejemplo:
 filename = "distances100.txt"
 ```
 
-**IMPORTANTE: Con el programa 'ProgramaParte1Test.py' es posible probar los algoritmos con el ejemplo 'distances100_costosminimos'**
+**IMPORTANTE: Con el programa 'ProgramaParte1Test.py' es posible probar los algoritmos con el ejemplo 'distances100_costosminimos'.**
+
+**IMPORTANTE: Se adjunta en el repositorio el documento 'PARTE 1 COMPARACION TIEMPOS EJECUCION' en donde se ejecutar cada uno de los algoritmos con las matrices adjuntas y se comparan los tiempos de ejecución.**
 
 ### Formato del Archivo de Entrada
 El programa espera un archivo de texto que represente un grafo ponderado. Cada línea del archivo debe contener los pesos de las aristas desde un vértice hasta todos los demás, separados por espacios. Un valor de -1 indica que no hay conexión directa entre los vértices.
