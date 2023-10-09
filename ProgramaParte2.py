@@ -77,7 +77,7 @@ graph = create_graph(archivo)
 resultado = componentes_conectados(graph)
 contador = 1
 for i in resultado:
-    print("\n")
+   
     print("---",contador , "Componente conectado --- ")
     print("\n")
     print(i)
