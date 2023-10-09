@@ -56,3 +56,52 @@ Ejemplo:
  [-1. -1.  0.  2.]
  [-1. -1. -1.  0.]]
 ```
+
+
+## Parte 2 (ProgramaParte2.py):
+
+En este programa se implementa una solucion al problema de hallar componentes conectados en un grafo que no es dirigido.
+
+**Para leer un archivo, asegurarse que cumpla con el formato de entrada y que esté dentro de la carpeta en donde se encuentra el programa. Luego modificar la línea de código 74 asignando a la variable "archivo" el nombre del archivo que represente el grafo:** 
+
+
+## Formato del archivo de entrada 
+El programa recibe como input un archivo de texto en el cual se encuentra el grafo separado por tabs (tabulaciones) 
+Ejemplo : 
+
+-1	-1	-1	1	-1	-1	-1
+-1	-1	-1	-1	-1	1	-1
+-1	-1	-1	1	-1	-1	-1
+1	-1	1	-1	-1	-1	-1
+-1	-1	-1	-1	-1	-1	1
+-1	1	-1	-1	-1	-1	-1
+-1	-1	-1	-1	1	-1	-1
+
+Cada numero esta separado por una tabulacion y para cada fila existe un "enter".
+
+Los indices en la matriz pueden tomar dos valores: 1 si existe una relacion entre los vertices o -1 si no existe esta relacion.
+La matriz es simetrica debido a que el grafo no es dirigido, por lo que la relacion del vertice 0 al 1, debe existir al mismo tiempo que la relacion de 1 a 0.
+
+## Formato de salida 
+
+Como resultado tenemos los componentes conectados o especificamente los vertices que se conectan entre si.
+
+se presenta de la siguiente forma:
+
+Ejemplo: 
+
+--- 1 Componente conectado ---
+
+
+[1, 5]
+
+
+
+
+--- 2 Componente conectado ---
+
+
+[4, 6]
+
+```
+
