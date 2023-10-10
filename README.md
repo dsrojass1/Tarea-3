@@ -100,3 +100,40 @@ Ejemplo:
 
 ```
 
+
+## Parte 3 (ProgramaParte3.py):
+Este programa implementa una variante del algoritmo DFS, lo anterior con el objetivo de verificar si un grafo dirigido dado tiene o no ciclos. El programa lee un archivo de texto que representa un grafo ponderado y verifica si existen ciclos en el mismo.
+
+**Para leer un archivo, asegurarse que cumpla con el formato de entrada y que esté dentro de la carpeta en donde se encuentra el programa. Luego modificar la línea de código 37 asignando a la variable filename el nombre del archivo que represente el grafo:** 
+
+Ejemplo:
+
+```
+filename = "distances5.txt"
+```
+
+**IMPORTANTE: El archivo por defecto es "distances5.txt", sin embargo, es posible probar otros dos casos con los archivos "distances5NC.txt" y "distances5NC2.txt".**
+
+### Formato del Archivo de Entrada
+El programa espera un archivo de texto que represente un grafo ponderado. Cada línea del archivo debe contener los pesos de las aristas desde un vértice hasta todos los demás, separados por espacios. Un valor de -1 indica que no hay conexión directa entre los vértices. Adicionalmente, el valor 0 indica que no existe un arco que conecte un vertice con el mismo directamente. 
+
+Ejemplo:
+
+```
+0	90	80	-1	-1
+15	0	69	48	-1
+91	-1	0	12	39
+78	-1	-1	0	36
+26	12	39	33	0
+```
+
+En este ejemplo, el vértice 0 está conectado con el vértice 1 con un peso de 90 y, a su vez, el vértice 1 está conectado al vértice 0 con un peso de 15. En este caso el grafo posee al menos un ciclo.
+
+### Salida
+El programa imprimirá un mensaje que indica si el grafo posee al menos un ciclo o si, por el contrario, es acíclico. (La función DFS retorna un booleano que indica si existen o no ciclos en el grafo)
+
+Ejemplo:
+
+```
+-------------- El grafo cuenta con al menos un ciclo ---------------
+```
