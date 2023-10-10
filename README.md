@@ -63,7 +63,7 @@ En este programa se implementa una solucion al problema de hallar componentes co
 ## Formato del archivo de entrada 
 El programa recibe como input un archivo de texto en el cual se encuentra el grafo separado por tabs (tabulaciones) 
 Ejemplo : 
-
+```
 -1	-1	-1	1	-1	-1	-1
 -1	-1	-1	-1	-1	1	-1
 -1	-1	-1	1	-1	-1	-1
@@ -71,7 +71,7 @@ Ejemplo :
 -1	-1	-1	-1	-1	-1	1
 -1	1	-1	-1	-1	-1	-1
 -1	-1	-1	-1	1	-1	-1
-
+```
 Cada numero esta separado por una tabulacion y para cada fila existe un "enter".
 
 Los indices en la matriz pueden tomar dos valores: 1 si existe una relacion entre los vertices o -1 si no existe esta relacion.
