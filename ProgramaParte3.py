@@ -38,9 +38,9 @@ filename = "distances5.txt" #Modificar esta linea para cambiar de archivo.
 graph = create_graph(filename) #Matriz de adyacencia.
 #print(graph)
 ciclo = DFS(graph) #Retorna un Booleano
-print("´´´´\n")
+print("///\n")
 if ciclo:
     print("-------------- El grafo cuenta con al menos un ciclo ---------------\n")
 else:
     print("-------------- El grafo es acíclico ---------------\n")
-print("´´´´")
+print("///")
